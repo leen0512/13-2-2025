@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function TextChanger(props){
+function Counter(props){
     return <div>
-        <p>{props.text}</p>
+        <p>{props.count}</p>
         <hr></hr>
     </div>
 }
 
-export default TextChanger;
+export default Counter;

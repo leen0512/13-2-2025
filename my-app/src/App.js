@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Message from './components/props/Message';
 import NumberDisplay from './components/props/NumberDisplay';
 import TextChanger from './components/state/TextChanger';
+import Counter from './components/state/Counter';
 
 function App() {
   //props
@@ -14,6 +15,7 @@ function App() {
 
   //state
   const [text, setText] = useState("welcome");
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -24,6 +26,9 @@ function App() {
       {/* state */}
       <TextChanger text={text}></TextChanger>
       <button onClick={() => setText("Hello World")}>Click Here to Change Text</button>
+      <Counter count={count}></Counter>
+      <button onClick={() => setCount(count+1)}>Click Here to Increase Count by 1</button>
+    
     </div>
   );
 }
