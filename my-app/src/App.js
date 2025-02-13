@@ -6,6 +6,7 @@ import NumberDisplay from './components/props/NumberDisplay';
 import TextChanger from './components/state/TextChanger';
 import Counter from './components/state/Counter';
 import OnMount from './components/useEffect/OnMount';
+import CounterEffect from './components/useEffect/CounterEffect';
 
 function App() {
   //props
@@ -17,6 +18,9 @@ function App() {
   //state
   const [text, setText] = useState("welcome");
   const [count, setCount] = useState(0);
+
+  //use effect
+  const [count1, setCount1] = useState(0);
 
   return (
     <div className="App">
@@ -33,6 +37,11 @@ function App() {
       <hr></hr>
       {/* use effect */}
       <OnMount></OnMount>
+      <hr></hr>
+      <CounterEffect count1={count1}></CounterEffect>
+      <button onClick={() => setCount1(count1+1)}>Click Here to Increase Count by 1</button>
+      <hr></hr>      
+
     </div>
   );
 }

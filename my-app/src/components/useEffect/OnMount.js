@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function OnMount(props){
+function OnMount(){
     useEffect( () => {
         console.log("The component is loading..")
     }, [])
