@@ -5,6 +5,7 @@ import Message from './components/props/Message';
 import NumberDisplay from './components/props/NumberDisplay';
 import TextChanger from './components/state/TextChanger';
 import Counter from './components/state/Counter';
+import OnMount from './components/useEffect/OnMount';
 
 function App() {
   //props
@@ -26,9 +27,12 @@ function App() {
       {/* state */}
       <TextChanger text={text}></TextChanger>
       <button onClick={() => setText("Hello World")}>Click Here to Change Text</button>
+      <hr></hr>
       <Counter count={count}></Counter>
       <button onClick={() => setCount(count+1)}>Click Here to Increase Count by 1</button>
-    
+      <hr></hr>
+      {/* use effect */}
+      <OnMount></OnMount>
     </div>
   );
 }
