@@ -7,6 +7,10 @@ import TextChanger from './components/state/TextChanger';
 import Counter from './components/state/Counter';
 import OnMount from './components/useEffect/OnMount';
 import CounterEffect from './components/useEffect/CounterEffect';
+import FetchUserOnMount from './components/use effect state and axios/FetchUserOnMount';
+import FetchPosts from './components/use effect state and axios/FetchPosts';
+import FetchOnClick from './components/use effect state and axios/FetchOnClick';
+
 
 function App() {
   //props
@@ -40,7 +44,12 @@ function App() {
       <hr></hr>
       <CounterEffect count1={count1}></CounterEffect>
       <button onClick={() => setCount1(count1+1)}>Click Here to Increase Count by 1</button>
-      <hr></hr>      
+      <hr></hr> 
+
+      {/* axios */}
+      {/* <FetchUserOnMount></FetchUserOnMount> */}
+      {/* <FetchPosts></FetchPosts> */}
+      <FetchOnClick></FetchOnClick>
 
     </div>
   );
